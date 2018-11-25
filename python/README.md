@@ -3,7 +3,9 @@
 This script used to generate animation `.gif` images, which visualize sorting algorithms (bubble, quick, heap, merge sort).
 
 The sample output:
+
 ![Bubble sort](bubble_sort.gif)
+
 Bubble sort
 
 # Prerequisites
