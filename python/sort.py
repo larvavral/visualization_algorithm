@@ -122,6 +122,7 @@ def main():
     parse.add_argument('-as', '--array_size', type=int, default=20, help='Size of array which will be sorted')
     parse.add_argument('-st', '--sort_type', default='bubble', help='Sort type: bubble, quick, heap, merge')
     parse.add_argument('-i', '--interval', type=int, default=2, help='Interval time between 2 operations')
+    parse.add_argument('-o', '--output', default='sort.gif', help='Output file name')
     parse.print_help()
     args = parse.parse_args()
 
@@ -181,7 +182,7 @@ def main():
         repeat=False)
     
     # Save animation as gif.
-    anim.save('sort.gif', dpi=80, writer='imagemagick')
+    anim.save(args.output, dpi=80, writer='imagemagick')
 
     # Only show to desktop.
     # plt.show()
