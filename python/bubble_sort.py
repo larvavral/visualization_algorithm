@@ -37,7 +37,18 @@ def main():
 
     # Set axis limits.
     ax.set_xlim(0, len(A))
-    ax.set_ylim(0, int(5 * len(A)))
+    ax.set_ylim(0, int(5.5 * len(A)))
+
+    # Hide all the borders.
+    # ax.axis('off')
+
+    # Hide top and right borders.
+    ax.spines['top'].set_visible(False)
+    ax.spines['right'].set_visible(False)
+
+    # Hide the data in x and y axis.
+    # ax.get_xaxis().set_visible(False)
+    # ax.get_yaxis().set_visible(False)
 
     # Place a text label in the upper-left corner of the plot to display
     # number of operations performed by the sorting algorithm (each "yield"
@@ -57,10 +68,10 @@ def main():
         repeat=False)
     
     # Save animation as gif.
-    anim.save('sort.gif', dpi=80, writer='imagemagick')
+    #anim.save('sort.gif', dpi=80, writer='imagemagick')
 
     # Only show to desktop.
-    # plt.show()
+    plt.show()
 
 if __name__ == '__main__':
     main()
